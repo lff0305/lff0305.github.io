@@ -1,3 +1,3 @@
 [submodule "themes/cactus"]
 	path = themes/cactus
-	url = lff:lff0305/hexo-theme-cactus.git
+	url = https://github.com/lff0305/hexo-theme-cactus.git
