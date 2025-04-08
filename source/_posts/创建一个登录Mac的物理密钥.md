@@ -74,7 +74,7 @@ make
 ```
 如果没有问题会在当前目录下生成`pico-opengpg.ft2`文件。
 ## 刷入固件
-按住`BOOT`键， 将RP2350插入USB接口。会自动识别成一个移动存储。把上一步生成的ft2文件拷入即可。
+按住`BOOT`键， 将RP2350插入USB接口。会自动识别成一个移动存储。把上一步生成的ft2文件拷入即可。等待几秒钟当LED闪烁的时候刷机完毕。
 ## 下载安装ykman cli
 在https://developers.yubico.com/yubikey-manager/Releases/下载ykman cli工具。
 我下载解压后是
@@ -83,3 +83,27 @@ make
 YubiKey Manager (ykman) version: 5.6.1
 ```
 ## 生成MacOS需要的Key和证书
+重新插入RP2350（正常插入，不需要按住BOOT），然后运行下面的命令生成Key和证书：
+```
+ykman piv keys generate 9a key9a.pub
+ykman piv certificates generate 9a -s "CN=MacOS login"
+ykman piv keys generate 9d key9d.pub
+ykman piv certificates generate 9d -s "CN=encryption"
+```
+
+**_注意:_** 默认的PIN是`123456` Admin Pin是`12345678`。
+
+## 测试
+
+将Key重新插拔（不需要按住BOOT）。如果没有问题Mac就会弹出对话框
+
+![](/images/mac2.png)
+
+![](/images/mac1.png)
+
+点击`配对`即可。如果没问题再次登录的时候就可以直接插入Key来实现免密码登录。
+
+## 参考
+
+- https://support.yubico.com/hc/en-us/articles/360016649059-Using-your-YubiKey-as-a-smart-card-in-macOS
+- https://support.apple.com/zh-cn/guide/deployment/depc47f60521/web (PIV预置一节）
