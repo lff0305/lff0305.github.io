@@ -13,16 +13,16 @@ tags: pico mac
 
 # 编译固件
 因为要模拟有版权的内容， 所以固件要自己编译。
-## 安装依赖项
+# 安装依赖项
 主要的依赖项有：
 - ARM tools (arm-gnu-toolchain), 官网下载解压即可
 - Pico SDK, Github下载解压即可
 - CMake
 - GNU Make
 - GCC tools
-## 下载Pico Keys GPG固件
+# 下载Pico Keys GPG固件
 网址是`https://github.com/polhenarejos/pico-openpgp`， 下载解压到某目录即可。
-## 运行cmake，生成Makefile
+# 运行cmake，生成Makefile
 按照pico-opengpg的文档，运行
 ```
 cd <解压目录>
