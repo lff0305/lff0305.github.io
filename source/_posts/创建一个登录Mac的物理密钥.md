@@ -31,8 +31,10 @@ mkdir build
 cd build
 export PICO_SDK_PATH=<上面的SDK解压路径>
 export PICO_TOOLCHAIN_PATH=<上面的ARM tools解压路径>
-cmake .. -DPICO_BOARD=waveshare_rp2350_one -DPICO_PLATFORM=rp2350 -DVIDPID=Yubikey5
+cmake .. -DPICO_BOARD=waveshare_rp2350_one \
+         -DPICO_PLATFORM=rp2350 \
+         -DVIDPID=Yubikey5
 ```
-> [!TIP]
-> 因为要使用Yubikey的工具所以要把USB硬件ID设置成Yubikey5的ID, 通过VIDPID
-Tip
+
+> **_注意:_** 因为要使用Yubikey的工具所以要把USB硬件ID通过VIDPID设置成Yubikey5的ID 
+
