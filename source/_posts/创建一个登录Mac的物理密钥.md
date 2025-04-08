@@ -95,7 +95,7 @@ ykman piv certificates generate 9d -s "CN=encryption"
 
 ## 测试
 
-将Key重新插拔（不需要按住BOOT）。如果没有问题Mac就会弹出对话框
+将Key重新插拔（不需要按住`BOOT`）。如果没有问题Mac就会弹出对话框
 
 ![](/images/mac2.png)
 
