@@ -101,6 +101,14 @@ ykman piv certificates generate 9d -s "CN=encryption"
 
 ![](/images/mac1.png)
 
+也可以用命令`sc_auth`命令。正确的输出是
+```
+ sc_auth identities
+SmartCard: com.apple.pivtoken:C5E212F78F9F48EA9E7D2B33AE5B3740
+Unpaired identities:
+46F8353E93EF4F609C8F09CE898054D5D99FA230        用于PIV认证的证书 (MacOS login)
+```
+
 点击`配对`即可。如果没问题再次登录的时候就可以直接插入Key来实现免密码登录。
 
 ## 参考
