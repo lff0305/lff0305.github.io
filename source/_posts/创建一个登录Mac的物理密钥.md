@@ -108,6 +108,35 @@ SmartCard: com.apple.pivtoken:C5E212F78F9F48EA9E7D2B33AE5B3740
 Unpaired identities:
 46F8353E93EF4F609C8F09CE898054D5D99FA230        用于PIV认证的证书 (MacOS login)
 ```
+或者通过`ykman`工具：
+```
+ykman piv info          
+PIV version:              5.7.0
+PIN tries remaining:      3/3
+PUK tries remaining:      3/3
+Management key algorithm: AES192
+CHUID: 3019d4e739da739ced39ce739d836858210842108421c84210c3eb3410c5e212f78f9f48ea9e......
+CCC:   No data available
+Slot 9A (AUTHENTICATION):
+  Private key type: RSA2048
+  Public key type:  RSA2048
+  Subject DN:       CN=MacOS login
+  Issuer DN:        CN=MacOS login
+  Serial:           3a:1b:61:76:1a:23:61:ac:65:24:6b:72:b1:1b................
+  Fingerprint:      435e7af928b5acc2ecd07165254b4fe45cb5cea8d395206e................
+  Not before:       2025-04-07T08:21:58+00:00
+  Not after:        2026-04-07T08:21:58+00:00
+
+Slot 9D (KEY_MANAGEMENT):
+  Private key type: RSA2048
+  Public key type:  RSA2048
+  Subject DN:       CN=encryption
+  Issuer DN:        CN=encryption
+  Serial:           62:d7:ce:a2:c6:20:35:38:e2:71:55:26:95:f8................
+  Fingerprint:      ece86cf9fc3ea747178fb602289b0743a1eae6a9996a0d43.................
+  Not before:       2025-04-07T08:23:28+00:00
+  Not after:        2026-04-07T08:23:28+00:00
+```
 
 点击`配对`即可。如果没问题再次登录的时候就可以直接插入Key来实现免密码登录。
 
