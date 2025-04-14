@@ -4,6 +4,8 @@ date: 2025-04-14 21:38:01
 tags: [pico,docker]
 ---
 
+板子是waveshare的`rp_2350_one`
+
 Dockerfile:
 ```docker
 FROM ubuntu:24.04
@@ -32,7 +34,9 @@ RUN mkdir /src && \
 
 RUN cd /src/pico-fido && mkdir build && \
     cd build && \
-    PICO_TOOLCHAIN_PATH=/toolchain/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi PICO_SDK_PATH=/tmp/pico-sdk cmake .. -DPICO_BOARD=waveshare_rp2350_one -DVIDPID=Yubikey5 -DPICO_PLATFORM=rp2350 && \
+    PICO_TOOLCHAIN_PATH=/toolchain/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi \
+    PICO_SDK_PATH=/tmp/pico-sdk \
+    cmake .. -DPICO_BOARD=waveshare_rp2350_one -DVIDPID=Yubikey5 -DPICO_PLATFORM=rp2350 && \
     make
 
 RUN cd /src/pico-fido/build && ls -al
@@ -44,3 +48,5 @@ mkdir dist
 docker build . -t pico-fido-build:dev
 docker run --rm -u $(id -u):$(id -g) -v ./dist:/dist pico-fido-build:dev sh -c "cp -r /src/pico-fido/build/*.uf2 /dist"
 ```
+
+在`./dist`下会生成`pico_fido.uf2`文件，刷入即可
