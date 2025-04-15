@@ -19,7 +19,7 @@ tags: [pico,mac]
 - GNU Make
 - GCC tools
 ## 下载Pico Keys GPG固件
-网址是`https://github.com/polhenarejos/pico-openpgp`， 下载解压到某目录即可。
+网址是`https://github.com/polhenarejos/pico-openpgp`， 直接`git clone`即可。
 ## 运行cmake，生成Makefile
 按照pico-opengpg的文档，运行
 ```shell
