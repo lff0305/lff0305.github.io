@@ -46,12 +46,15 @@ $$
 $$
 Then
 $$
-4(a-1)(b-1)(c-1) = 9 \\
-4[abc-ab-ac-bc+(a+b+c)-1] = 9 \\
-4[-1-(ab+ac+bc)+4-1] = 9 \\
-4[2-(ab+ac+bc)]=9 \\
-2-(ab+ac+bc)=\frac{9}{4} \\
-(ab+ac+bc)=2-\frac{9}{4}=-\frac{1}{4}
+\begin{aligned}
+4(a-1)(b-1)(c-1) &= 9 \\
+4[abc-ab-ac-bc+(a+b+c)-1] &= 9 \\
+4[-1-(ab+ac+bc)+4-1] &= 9 \\
+4[2-(ab+ac+bc)]&=9 \\
+2-(ab+ac+bc)&=\frac{9}{4} \\
+(ab+ac+bc)&=2-\frac{9}{4}\\
+(ab+ac+bc)&=-\frac{1}{4}
+\end{aligned}
 $$
 From
 $$
@@ -59,7 +62,7 @@ $$
 16 &= (a+b+c)^2 \\
 &= a^2+b^2+c^2+2ab+2ac+2bc \\
 &= [a^2+b^2+c^2] + 2(ab+ac+bc) \\
-&= [a^2+b^2+c^2] - 2*\frac{1}{4} \\
+&= [a^2+b^2+c^2] + 2*-[\frac{1}{4}] \\    
 &= [a^2+b^2+c^2] - \frac{1}{2}
 \end{aligned}
 $$
