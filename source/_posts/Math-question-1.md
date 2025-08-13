@@ -1,6 +1,7 @@
 ---
 title: Math question 1
 date: 2025-08-13 10:43:29
+mathjax: true
 tags: math
 ---
 
@@ -12,7 +13,7 @@ $abc=-1, a+b+c=4$
 
 $AND$
 
-$\frac{a}{a^2-3a-1}+\frac{b}{b^2-3b-1}+\frac{c}{c^2-3c-1}=\frac{4}{9}$
+$\frac{a}{a^{2}-3a-1}+\frac{b}{b^2-3b-1}+\frac{c}{c^2-3c-1}=\frac{4}{9}$
 
 $What\ is\ a^2 + b^2 + c^2 ? $
 
